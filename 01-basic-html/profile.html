@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        body {
+                background: linear-gradient(to right, #ffffff, rgb(137, 204, 235));
+                
+            }
+        h1 {
+            font-family: Arial;
+            font-size: 50px;
+        }
+        p {
+            font-family: Arial;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        input {
+            font-family: Arial;
+            font-size: 30px;
+            background-color: rgb(206, 207, 255);
+            border-radius: 10px;
+            border-style: none;
+            text-align:left;
+            vertical-align: top;
+            font-weight: bold;
+            padding-left: 12px;
+            color: #0f1672;
+        }
+        textarea {
+            font-family: Arial;
+            font-size: 30px;
+            background-color: rgb(206, 207, 255);
+            border-radius: 10px;
+            border-style: none;
+            text-align:left;
+            vertical-align: top;
+            font-weight: bold;
+            padding-left: 12px;
+            color: #0f1672;
+        }
+        button
+        {
+            font-family: Arial;
+            font-size: 30px;
+            background-color: rgb(39, 41, 126);
+            border-radius: 30px;
+            border-style: none;
+            text-align:left;
+            vertical-align: top;
+            font-weight: bold;
+            padding-left: 12px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <p>Asunto:</p>
+    <input type="text" id="asunto"></input>
+    <p>Nombre:</p>
+    <input type="text" id="name">
+    <p>Comentarios:</p>
+    <textarea type="text" id="comentarios" style="height: 200px; width: 500px;"></textarea>
+    <p>Correo Electrónico:</p>
+    <input type="text" id="email" style="width: 500px;">
+    <p>Teléfono:</p>
+    <input type="number" id="telefono" style="width: 500px;">
+    <button onclick="show()">Enviar</button>
+    <script>
+        function show()
+        {
+            var asunto = document.getElementById('asunto').value;
+            var name = document.getElementById('name').value;
+            var comentarios = document.getElementById('comentarios').value;
+            var email = document.getElementById('email').value;
+            document.getElementById('message').innerHTML =  "Gracias por sus comentarios " + name + ", te contactaremos a " + email + " en caso de ser necesario.";
+        }
+    </script>
+    <p><span id="message"></span></p>
+</body>
+</html>
